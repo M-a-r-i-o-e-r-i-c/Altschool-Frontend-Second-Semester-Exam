@@ -1,0 +1,116 @@
+/*======GLOBAL VARIABLES======*/
+:root {
+  --icons-color: #4c5773;
+  --icons-bg-color: #e2e6e9;
+  --shadow-dark-color: #d3dae7;
+  --shadow-light-color: #fff;
+  --main-bg-color: #ecf0f3;
+  --main-bg-dark: #1b1b2d;
+  --dark-box-shadow: 1rem 1rem 1rem #171726, -1rem -1rem 1rem #1f1f34;
+}
+
+a {
+  color: var(--icons-color);
+  text-decoration: none;
+}
+
+#dark a {
+  color: white;
+}
+
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  background: var(--icons-bg-color);
+  padding: 0.3rem 2rem;
+  border-radius: 2rem;
+  transition: all 300ms ease;
+}
+
+.left:hover {
+  cursor: pointer;
+  background: transparent;
+}
+
+.logo {
+  background: transparent;
+  color: coral;
+}
+
+#dark .left {
+  background: var(--main-bg-dark);
+}
+
+#dark .left:hover {
+  background: #28283d;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.right a,
+.theme {
+  background: var(--icons-bg-color);
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+
+#dark .right a,
+#dark .theme {
+  background: #28283d;
+  color: white;
+}
+
+.right a:hover {
+  box-shadow: var(--box-shadow);
+}
+
+#dark .right a:hover {
+  box-shadow: var(--dark-box-shadow);
+}
+
+.theme:hover {
+  box-shadow: var(--box-shadow);
+}
+
+#dark .theme:hover {
+  box-shadow: var(--dark-box-shadow);
+}
+
+@media screen and (max-width: 1024px) {
+  .top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .left {
+    width: 20%;
+    position: relative;
+  }
+
+  .right {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .logo {
+    width: 3rem;
+    position: absolute;
+    left: 0.5rem;
+    bottom: 0.5rem;
+  }
+}

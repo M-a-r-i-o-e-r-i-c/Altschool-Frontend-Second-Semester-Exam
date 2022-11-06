@@ -1,0 +1,78 @@
+.bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom .right svg:last-child {
+  margin-left: 1.5rem;
+}
+
+span {
+  display: flex;
+}
+
+.right-bottom {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.right-bottom a {
+  background: var(--icons-bg-color);
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease;
+}
+
+#dark .right-bottom a {
+  background: var(--main-bg-dark);
+}
+
+#dark .right-bottom a:hover {
+  box-shadow: var(--dark-box-shadow);
+}
+
+.right-bottom a:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.left-bottom {
+  background: var(--icons-bg-color);
+  padding: 0.1rem 2rem;
+  border-radius: 2rem;
+  transition: all 300ms ease;
+}
+
+#dark .left-bottom {
+  background: var(--main-bg-dark);
+}
+
+#dark .left-bottom:hover {
+  box-shadow: var(--dark-box-shadow);
+}
+
+.left-bottom:hover {
+  cursor: pointer;
+  background: transparent;
+}
+
+@media screen and (max-width: 1024px) {
+  .top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .left-bottom {
+    width: 40%;
+  }
+
+  .right-bottom {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
